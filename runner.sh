@@ -1,4 +1,4 @@
-./solcbin/solc8 --bin-runtime samples/Add.sol -o samples  --overwrite
+./solcbin/solc5 --bin-runtime samples/Add.sol -o samples  --overwrite
 mv ./samples/Add.bin-runtime ./samples/Add.hex 
 rm -rf ./samples/Add.bin-runtime
 rm -rf ./cachestore/Add 

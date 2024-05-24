@@ -1,30 +1,12 @@
-pragma solidity >=0.4.2 <=0.8.27;
+pragma solidity >=0.4.2 <=0.8.90;
 
 contract Add {
-    function one(uint a) 
-        public 
-        pure 
-    {
-       uint c = 0;
-       uint b = 512;
-       while (a > 0 && c < 4096) {
-            a = a - 32;
-            c = c + 4 * b;
-       }
+    function popN(uint256 n) public pure {
+        assembly {
+            // Clear stack
+            for { let i := 0 } lt(i, n) { i := add(i, 1) } {
+                pop(0)  // Pop value from stack
+            }
+        }
     }
-
-    function two(uint a) 
-        public 
-        pure 
-    {
-       uint c = 0;
-       uint b = 512;
-       if (a > 0) {
-            a = a + 1024;
-       } else {
-            a = a - 1024;
-       }
-       c = a + b;
-    }
-
 }
