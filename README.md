@@ -144,3 +144,8 @@ The Gigahorse framework also underpins the realtime decompiler and analysis tool
 
 
 
+```c
+            assembly ("memory-safe") {
+                y := verbatim_0i_1o(hex"6001")
+            }
+```

@@ -1,4 +1,4 @@
-pragma solidity >=0.4.2 <=0.7.6;
+pragma solidity >=0.4.2 <=0.8.27;
 
 contract Add {
     function one(uint a) 
